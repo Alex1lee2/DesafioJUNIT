@@ -89,4 +89,63 @@ class JulgamentoPrisioneiroTest {
 }
 
 Nota : Criação da classe Enum resposta
+Etapa 3
+
+public class JulgamentoPrisioneiro {
+   private int PENA_INOCENCIA = 10;
+   private int PENA_CONDENACAO_MUTUA = 15;
+   private int PENA_CONDENACAO_INDIVIDUAL = 10;
+   private int PENA_CONDENACAO_CUMPLICES = 11;
+
+   public enum Resposta{
+	   NEGACAO, DELACAO
+   }
+   
+   public int calculaPena(Resposta respostaPrisioneiroA, Resposta respostaPrisioneiroB) {
+      if (respostaPrisioneiroA == Resposta.DELACAO) {
+          if (respostaPrisioneiroB == Resposta.DELACAO) {
+            return PENA_CONDENACAO_MUTUA;
+          } else {
+                 return PENA_INOCENCIA;
+                 }
+       } else {
+                if (respostaPrisioneiroB == Resposta.DELACAO) {
+                    return PENA_CONDENACAO_INDIVIDUAL;
+                } else {
+                         return PENA_CONDENACAO_CUMPLICES;
+                        }
+                }
+     }
+}
+
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import JulgamentoPrisioneiro.Resposta;
+
+class JulgamentoPrisioneiroTest {
+
+	@Test
+	void testJulgamento() {
+		Resposta respSuspeitoA = Resposta.DELACAO;
+		Resposta respSuspeitoB = Resposta.DELACAO;
+		
+		JulgamentoPrisioneiro jp = new JulgamentoPrisioneiro();
+		assertNotNull(jp);
+		
+		int penaSuspeitoA = jp.calculaPena(respSuspeitoA, respSuspeitoB);
+		int penaSuspeitoB = jp.calculaPena(respSuspeitoB, respSuspeitoA);
+		
+		assertEquals(5, penaSuspeitoA);
+		assertEquals(5, penaSuspeitoB);
+		
+	}
+
+}
+Nota : Encontrado erro de importação do enum Resposta e da utilização no teste
+
+
 
