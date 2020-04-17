@@ -1,7 +1,7 @@
 rm80653 Alex Lee
 
 
-
+JulgamentoPrisioneiro.java
 public class JulgamentoPrisioneiro {
 	   private int PENA_INOCENCIA = 10;
 	   private int PENA_CONDENACAO_MUTUA = 15;
@@ -28,6 +28,7 @@ public class JulgamentoPrisioneiro {
 	}
 
 
+JulgamentoPrisioneiroTest.java
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -47,7 +48,7 @@ NOTA : não foi encontrado o enum Resposta
 Etapa 2
 
 
-
+JulgamentoPrisioneiro.java
 public class JulgamentoPrisioneiro {
 	   private int PENA_INOCENCIA = 10;
 	   private int PENA_CONDENACAO_MUTUA = 15;
@@ -75,6 +76,7 @@ public class JulgamentoPrisioneiro {
 	     }
 	}
 
+JulgamentoPrisioneiroTest.java
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -90,6 +92,7 @@ class JulgamentoPrisioneiroTest {
 
 Nota : Criação da classe Enum resposta
 Etapa 3
+JulgamentoPrisioneiroTest.java
 
 public class JulgamentoPrisioneiro {
    private int PENA_INOCENCIA = 10;
@@ -117,7 +120,7 @@ public class JulgamentoPrisioneiro {
                 }
      }
 }
-
+JulgamentoPrisioneiroTest.java
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -148,6 +151,7 @@ class JulgamentoPrisioneiroTest {
 Nota : Encontrado erro de importação do enum Resposta e da utilização no teste
 
 Etapa 4
+JulgamentoPrisioneiro.java
 
 public class JulgamentoPrisioneiro {
    private int PENA_INOCENCIA = 10;
@@ -175,6 +179,7 @@ public class JulgamentoPrisioneiro {
                 }
      }
 
+Resposta.java
 public enum Resposta {
 	NEGACAO, DELACAO
 }
@@ -218,6 +223,9 @@ Nota : Adicionado  classe Resposta.Java com enum Publico para as classes consegu
 
 
 Etapa 5
+JulgamentoPrisioneiro.java
+
+
 public class JulgamentoPrisioneiro {
    private int PENA_INOCENCIA = 10;
    private int PENA_CONDENACAO_MUTUA = 15;
