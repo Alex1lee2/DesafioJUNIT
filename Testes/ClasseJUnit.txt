@@ -27,7 +27,7 @@ public class JulgamentoPrisioneiro {
 	     }
 	}
 
-package teste;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,7 +46,7 @@ NOTA : não foi encontrado o enum Resposta
 
 Etapa 2
 
-package teste;
+
 
 public class JulgamentoPrisioneiro {
 	   private int PENA_INOCENCIA = 10;
